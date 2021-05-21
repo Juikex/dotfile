@@ -1,0 +1,12 @@
+#! /bin/sh
+#wacom映射到第二屏
+Device=$(xsetwacom --list devices | sed -n '1p')
+Pen_ID=$(echo "${Device}" | awk -F ' ' '{print $9}')
+Map=$(xrandr | sed -n '2p' | awk -F ' ' '{print $4}')
+if test -z "$Pen_ID"
+then
+    notify-send "wacom未插入"
+else
+    notify-send "wacom映射到第二屏"
+    xsetwacom --set ${Pen_ID} MapToOutput "${Map}"
+fi

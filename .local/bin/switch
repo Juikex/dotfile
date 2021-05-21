@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+theme=$(cat ~/.local/bin/theme)
+
+if [[ "$theme" == "n" ]]; then
+	echo "l" > ~/.local/bin/theme
+else
+	echo "n" > ~/.local/bin/theme
+fi
+
+
+if [[ "$theme" == "l" ]]
+then
+	# Firefox
+	cp ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome-nord.css ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome.css
+    # Fcitx5
+    sed -i "s/Nord-Dark/Nord-Light/g" ~/.config/fcitx5/conf/classicui.conf
+    killall fcitx5
+    # Wallpaper
+    feh --bg-fill ~/.local/Background/NordDay.png
+    # Dunst
+    cp ~/.config/dunst/dunstrc-light ~/.config/dunst/dunstrc
+	killall dunst
+    # Alacritty
+    cp ~/.config/alacritty/alacritty-nord-light.yml ~/.config/alacritty/alacritty.yml
+    # polybar
+    cp ~/.config/i3/polybar/colors-light ~/.config/i3/polybar/colors
+	sh ~/.local/bin/i3bar
+    # Global theme
+    sed -i "s/Nordic/WhiteSur-light-alt/g" ~/.config/xsettingsd/xsettingsd.conf
+    sed -i "s/Nordic/WhiteSur-light-alt/g" ~/.gtkrc-2.0
+    sed -i "s/Nordic/WhiteSur-light-alt/g" ~/.config/gtk-3.0/settings.ini
+    pkill -1 xsettingsd
+    # Rofi
+    sed -i "s/nord/light/g" ~/.config/rofi/config.rasi
+    # Nvim
+    sed -i "s/nord/one" ~/.config/nvim/plugin/c_colorscheme.vim
+    # Zathura
+    cp ~/.config/zathura/zathurarc-light ~/.config/zathura/zathurarc
+    # Notify
+    notify-send "Switch to Light Now!" -i ~/.local/nord.png -t 3000
+elif [[ "$theme" == "n" ]]
+then
+	# firefox
+	cp ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome-light.css ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome.css
+    # Fcitx5
+    sed -i "s/Nord-Light/Nord-Dark/g" ~/.config/fcitx5/conf/classicui.conf
+    killall fcitx5
+    # Wallpaper
+    feh --bg-fill ~/.local/Background/NordNight.png
+    # Dunst
+    cp ~/.config/dunst/dunstrc-nord ~/.config/dunst/dunstrc
+	killall dunst
+    # Alacritty
+    cp ~/.config/alacritty/alacritty-nord-dark.yml ~/.config/alacritty/alacritty.yml
+    # polybar
+    cp ~/.config/i3/polybar/colors-nord ~/.config/i3/polybar/colors
+	sh ~/.local/bin/i3bar
+    # Global theme
+    sed -i "s/WhiteSur-light-alt/Nordic/g" ~/.config/xsettingsd/xsettingsd.conf
+    sed -i 's/WhiteSur-light-alt/Nordic/g' ~/.gtkrc-2.0
+    sed -i "s/WhiteSur-light-alt/Nordic/g" ~/.config/gtk-3.0/settings.ini
+    pkill -1 xsettingsd
+    # Rofi
+    sed -i "s/light/nord/g" ~/.config/rofi/config.rasi
+    # Nvim
+    sed -i "s/one/nord" ~/.config/nvim/plugin/c_colorscheme.vim
+    # Zathura
+    cp ~/.config/zathura/zathurarc-nord ~/.config/zathura/zathurarc
+    # Notify
+    notify-send "Switch to Nord Now!" -i ~/.local/nord.png -t 3000
+fi
+
+fcitx5 &

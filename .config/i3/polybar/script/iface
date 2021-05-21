@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case $1 in
+  -4)
+    AF=inet ;;
+  -6)
+    AF=inet6 ;;
+  *)
+    AF=inet6? ;;
+esac
+
+IPADDR=$(ip addr show $IF | perl -n -e "/$AF ([^\/]+).* scope global/ && print \$1 and exit")
+
+echo "$IPADDR" # full text
+echo "$IPADDR" # short text
+
+notify-send "ipaddress ${IPADDR}"

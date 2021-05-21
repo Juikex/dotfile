@@ -1,0 +1,10 @@
+configuration {
+  modi: "window,combi,ssh,drun";
+	width: 600;
+	lines: 15;
+	columns: 1;
+	font: "Fira Code Nerd Font 16";
+	show-icons: true;
+	theme: "~/.config/rofi/light.rasi";
+	display-drun: "App";
+}

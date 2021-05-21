@@ -1,0 +1,32 @@
+#!/bin/bash
+# export LC_TIME='en_US.UTF-8' 
+
+DATETIME=$(date "+%H:%M:%S")
+Hour=$(date "+%H")
+EarlyMorning=(5 6 7 8)
+Morning=(9 10 11)
+Noon=(12 13)
+Afternoon=(14 15 16 17 18)
+Night=(19 20 21 22)
+
+if [[ " ${EarlyMorning[@]} " =~ " ${Hour} " ]]; then
+	Greeting="早安"
+elif [[ " ${Morning[@]} " =~ " ${Hour} " ]]; then
+	Greeting="上午好"
+elif [[ " ${Noon[@]} " =~ " ${Hour} " ]]; then
+	Greeting="午安"
+elif [[ " ${Afternoon[@]} " =~ " ${Hour} " ]]; then
+	Greeting="下午好"
+elif [[ " ${Night[@]} " =~ " ${Hour} " ]]; then
+	Greeting="晚安"
+else
+	Greeting="当心猝死"
+fi
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+    notify-send "$Greeting" "现在是 ${Hour} 点"
+fi
+
+echo "${DATETIME}"
+echo "${DATETIME}"
+

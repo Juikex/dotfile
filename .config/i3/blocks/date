@@ -1,0 +1,6 @@
+#!/bin/sh
+RawDate=$(date | grep -Eo '[0-9]*')
+Month=$(echo "$RawDate" | sed -n '2p')
+Day=$(echo "$RawDate" | sed -n '3p')
+echo "${Month}·${Day}"
+echo ""

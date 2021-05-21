@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Terminate already running bar instances
+killall polybar
+killall polybar
+
+# Wait until the processes have been shut down
+
+# Launch polybar
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar main -c ~/.config/i3/polybar/config &
+  done
+else
+  polybar main -c ~/.config/i3/polybar/config &
+fi
+

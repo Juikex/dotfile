@@ -1,0 +1,21 @@
+#! /bin/sh
+#确保primary在正确屏幕 wacom映射到第二屏
+
+Device=$(xsetwacom --list devices | sed -n '1p')
+Pen_ID=$(echo "${Device}" | awk -F ' ' '{print $9}')
+Map=$(xrandr | sed -n '2p' | awk -F ' ' '{print $4}')
+
+Status=$(xrandr | sed -n '2p' | awk -F ' ' '{print $2}')
+
+screenfun(){
+	if test $Status = "connected"
+	then
+		xrandr --output HDMI-0 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output eDP-1-1 --mode 1920x1080 --pos 0x276 --rotate normal
+		#xsetwacom --set ${Pen_ID} MapToOutput "${Map}"
+	else
+		xrandr --output eDP-1-1 --primary --mode 1920x1080 --pos 0x276 --rotate normal
+	fi
+}
+screenfun
+feh --randomize --bg-fill /mnt/JK/wallpaper
+bash ~/.local/bin/i3bar
