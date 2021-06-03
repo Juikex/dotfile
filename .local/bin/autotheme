@@ -1,0 +1,40 @@
+#!/bin/sh
+storefile=~/.local/bin/sun.store
+themestore=~/.local/bin/themestore
+theme=$(cat $themestore)
+
+sunup_min=$(cat $storefile | awk -F ':' '{print int($2)}')
+sunset_min=$(cat $storefile | awk -F ':' '{print int($4)}')
+sunup_h=$(cat $storefile | awk -F ':' '{print int($1)}')
+sunset_h=$(cat $storefile | awk -F ':' '{print int($3)}')
+
+date=$(echo "$(date +%M) + 60*$(date +%H)" | bc)
+sunup=$(echo "$sunup_min + 60*$sunup_h" | bc)
+sunset=$(echo "$sunset_min + 60*$sunset_h" | bc)
+
+abs()
+{
+	echo "$1" | sed 's/^-//';
+}
+
+delsunup=$(echo "$date - $sunup" | bc)
+delsunset=$(echo "$date - $sunset" | bc)
+del=-2
+if [[ $date -lt 720 ]] ; then
+	if [[ $theme = 'n' ]] ; then
+		if [[ $(abs $delsunup) -lt 5 ]] ; then
+			bash ~/.local/bin/switch
+			notify-send "已经日出了" -t 3000
+			#echo "switch to light"
+		fi
+	fi
+else
+	if [[ $theme = 'l' ]] ; then
+		if [[ $(abs $delsunset ) -lt 50 ]] ; then
+			bash ~/.local/bin/switch
+			notify-send "已经日落了" -t 3000
+			#echo "switch to nord"
+		fi
+	fi
+fi
+

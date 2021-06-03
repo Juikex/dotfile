@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 
-theme=$(cat ~/.local/bin/theme)
+themestore=~/.local/bin/themestore
+theme=$(cat $themestore)
 
-if [[ "$theme" == "n" ]]; then
-	echo "l" > ~/.local/bin/theme
-else
-	echo "n" > ~/.local/bin/theme
+if [[ "$theme" == "l" ]]; then
+	echo "n" > $themestore
+else [[ "$theme" == "n" ]]
+	echo "l" > $themestore
 fi
 
-
-if [[ "$theme" == "l" ]]
+if [[ "$theme" == "n" ]]
 then
-	# Firefox
-	cp ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome-nord.css ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome.css
     # Fcitx5
     sed -i "s/Nord-Dark/Nord-Light/g" ~/.config/fcitx5/conf/classicui.conf
     killall fcitx5
@@ -39,10 +37,8 @@ then
     cp ~/.config/zathura/zathurarc-light ~/.config/zathura/zathurarc
     # Notify
     notify-send "Switch to Light Now!" -i ~/.local/nord.png -t 3000
-elif [[ "$theme" == "n" ]]
+elif [[ "$theme" == "l" ]]
 then
-	# firefox
-	cp ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome-light.css ~/.mozilla/firefox/63a8s1wa.default-release-1614425929272/chrome/userChrome.css
     # Fcitx5
     sed -i "s/Nord-Light/Nord-Dark/g" ~/.config/fcitx5/conf/classicui.conf
     killall fcitx5
@@ -72,3 +68,4 @@ then
 fi
 
 fcitx5 &
+

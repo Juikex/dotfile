@@ -1,0 +1,22 @@
+#!/bin/sh
+storefile=~/.local/bin/sun.store
+themestore=~/.local/bin/themestore
+theme=$(cat $themestore)
+date=$(echo "$(date "+%H")" | bc -l)
+sunupdate=$(cat $storefile | awk -F ':' '{print int($1)}')
+sunset=$(cat $storefile | awk -F ':' '{print int($3)}')
+
+if [[ $theme = "n" ]] ; then
+	if [[ $date -lt $sunset ]] && [[ $date -gt $sunupdate ]]; then
+		bash ~/.local/bin/switch
+	else
+		echo "ntheme is correct"
+	fi
+elif [[ $theme = "l" ]] ;then
+	if [[ $date -gt $sunset ]] || [[ $date -lt $sunupdate ]]; then
+		bash ~/.local/bin/switch
+	else
+		echo "ltheme is correct"
+	fi
+fi
+

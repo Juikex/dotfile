@@ -1,0 +1,3 @@
+@reboot ~/.local/bin/theme_boot
+@daily ~/.local/bin/sunset
+*/10 4-5,7-8 * * * ~/.local/bin/autotheme

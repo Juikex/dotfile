@@ -401,6 +401,8 @@ menu-0-1 = 
 menu-0-1-exec = reboot
 menu-0-2 = 
 menu-0-2-exec = bash ~/.local/bin/wacom
+menu-0-3 = 
+menu-0-3-exec = bash ~/.local/bin/samba.sh
 
 format-foreground = ${color.YELLOW}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

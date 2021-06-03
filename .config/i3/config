@@ -194,7 +194,7 @@ focus_follows_mouse no
 
 #自启动
 exec_always --no-startup-id bash ~/.local/bin/dualscreen
-exec_always --no-startup-id bash ~/.local/bin/samba.sh
+#exec_always --no-startup-id bash ~/.local/bin/samba.sh
 exec --no-startup-id picom --experimental-backends
 exec --no-startup-id clash
 exec --no-startup-id "fcitx5 &"

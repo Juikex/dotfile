@@ -1,0 +1,7 @@
+{
+	"coc.preferences.extensionUpdateCheck": "weekly",
+	"suggest.noselect":true,
+	"suggest.enablePreselect":false,
+	"http.proxy": "http://192.168.50.1:7890",
+	"coc.preferences.colorSupport":true
+}
