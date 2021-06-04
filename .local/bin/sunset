@@ -8,7 +8,6 @@ tmpfile=/tmp/$location.out
 storefile=~/.local/bin/sun.store
 today=$(date +%Y-%m-%d)
 filestat=$(stat $storefile | sed -n '6p' | awk -F '[： ]+' '{print $2}')
-
 if [[ $today = $filestat ]] ; then
 	echo "time is correct"
 else

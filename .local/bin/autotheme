@@ -30,7 +30,7 @@ if [[ $date -lt 720 ]] ; then
 	fi
 else
 	if [[ $theme = 'l' ]] ; then
-		if [[ $(abs $delsunset ) -lt 50 ]] ; then
+		if [[ $(abs $delsunset ) -lt 5 ]] ; then
 			bash ~/.local/bin/switch
 			notify-send "已经日落了" -t 3000
 			#echo "switch to nord"

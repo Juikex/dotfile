@@ -5,6 +5,6 @@ configuration {
 	columns: 1;
 	font: "Fira Code Nerd Font 16";
 	show-icons: true;
-	theme: "~/.config/rofi/nord.rasi";
+	theme: "~/.config/rofi/light.rasi";
 	display-drun: "App";
 }

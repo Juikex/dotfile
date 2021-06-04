@@ -1,4 +1,4 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# Configuration for Alacritty, the GPU enhanced terminal emulator
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -120,35 +120,35 @@ background_opacity: 0.85
   # This is a global setting and will require a log out or restart to take
   # effect.
 
-
-# Colors (Nord) 
+# Colors (OneHalfLight)
 colors:
-  # Default colors
-  primary:
-    background: '#2E3440'
-    foreground: '#D8DEE9'
-
-  # Normal colors
-  normal:
-    black: '#3B4252'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#88C0D0'
-    white: '#E5E9F0'
-
-  # Bright colors
   bright:
-    black: '#4C566A'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#8FBCBB'
-    white: '#ECEFF4'
+    black: '#4f525e'
+    blue: '#61afef'
+    cyan: '#56b6c2'
+    green: '#98c379'
+    magenta: '#c678dd'
+    red: '#e06c75'
+    white: '#ffffff'
+    yellow: '#e5c07b'
+  cursor:
+    cursor: '#bfceff'
+    text: '#383a42'
+  normal:
+    black: '#383a42'
+    blue: '#0184bc'
+    cyan: '#0997b3'
+    green: '#50a14f'
+    magenta: '#a626a4'
+    red: '#e45649'
+    white: '#fafafa'
+    yellow: '#c18401'
+  primary:
+    background: '#fafafa'
+    foreground: '#383a42'
+  selection:
+    background: '#bfceff'
+    text: '#383a42'
 
 bell:
   animation: EaseOutExpo
