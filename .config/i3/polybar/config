@@ -66,6 +66,7 @@ spacing = 1
 
 dim-value = 1.0
 
+wm-restack = i3
 wm-name = i3
 locale = en_US.UTF-8
 

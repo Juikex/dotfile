@@ -1,6 +1,8 @@
-SHELL=/bin/bash
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 DISPLAY=:0
-XDG_RUNTIME_DIR=/run/user/$(id -u)
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+XDG_RUNTIME_DIR=/run/user/1000
+_=/usr/bin/env
 @reboot ~/.local/bin/theme_boot
 @daily ~/.local/bin/sunset
 */10 4-6,19-20 * * * bash ~/.local/bin/autotheme
