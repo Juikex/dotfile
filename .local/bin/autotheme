@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 storefile=~/.local/bin/sun.store
 themestore=~/.local/bin/themestore
 theme=$(cat $themestore)
@@ -22,7 +22,7 @@ delsunset=$(echo "$date - $sunset" | bc)
 del=-2
 if [[ $date -lt 720 ]] ; then
 	if [[ $theme = 'n' ]] ; then
-		if [[ $(abs $delsunup) -lt 5 ]] ; then
+		if [[ $(abs $delsunup) -lt 6 ]] ; then
 			bash ~/.local/bin/switch
 			notify-send "已经日出了" -t 3000
 			#echo "switch to light"
@@ -30,7 +30,7 @@ if [[ $date -lt 720 ]] ; then
 	fi
 else
 	if [[ $theme = 'l' ]] ; then
-		if [[ $(abs $delsunset ) -lt 5 ]] ; then
+		if [[ $(abs $delsunset ) -lt 6 ]] ; then
 			bash ~/.local/bin/switch
 			notify-send "已经日落了" -t 3000
 			#echo "switch to nord"

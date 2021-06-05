@@ -1,3 +1,6 @@
+SHELL=/bin/bash
+DISPLAY=:0
+XDG_RUNTIME_DIR=/run/user/$(id -u)
 @reboot ~/.local/bin/theme_boot
 @daily ~/.local/bin/sunset
-*/10 4-5,7-8 * * * ~/.local/bin/autotheme
+*/10 4-6,19-20 * * * bash ~/.local/bin/autotheme

@@ -23,7 +23,7 @@ then
     cp ~/.config/alacritty/alacritty-nord-light.yml ~/.config/alacritty/alacritty.yml
     # polybar
     cp ~/.config/i3/polybar/colors-light ~/.config/i3/polybar/colors
-	sh ~/.local/bin/i3bar
+	bash ~/.local/bin/i3bar
     # Global theme
     sed -i "s/Nordic/WhiteSur-light-alt/g" ~/.config/xsettingsd/xsettingsd.conf
     sed -i "s/Nordic/WhiteSur-light-alt/g" ~/.gtkrc-2.0
@@ -51,7 +51,7 @@ then
     cp ~/.config/alacritty/alacritty-nord-dark.yml ~/.config/alacritty/alacritty.yml
     # polybar
     cp ~/.config/i3/polybar/colors-nord ~/.config/i3/polybar/colors
-	sh ~/.local/bin/i3bar
+	bash ~/.local/bin/i3bar
     # Global theme
     sed -i "s/WhiteSur-light-alt/Nordic/g" ~/.config/xsettingsd/xsettingsd.conf
     sed -i 's/WhiteSur-light-alt/Nordic/g' ~/.gtkrc-2.0

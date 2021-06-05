@@ -68,7 +68,6 @@ dim-value = 1.0
 
 wm-name = i3
 locale = en_US.UTF-8
-wm-restack = i3
 
 tray-position = right
 tray-maxsize = 18
