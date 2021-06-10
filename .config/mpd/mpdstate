@@ -1,9 +1,7 @@
 sw_volume: 100
 audio_device_state:1:my_fifo
 audio_device_state:1:My Pulse Output
-state: pause
-current: 85
-time: 17.666000
+state: stop
 random: 0
 repeat: 0
 single: 0
@@ -12,105 +10,106 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:F.I.R.飞儿乐团 - 千年之恋 [mqms2].flac
-1:蒋一侨 - 汝 [mqms2].flac
-2:蒋一侨 - 一棵树 One Tree [mqms2].flac
-3:蒋一侨 - 留下 Stay [mqms2].flac
-4:蒋一侨 - 芳年 Youth [mqms2].flac
-5:蒋一侨 - I Go Party Tonight [mqms2].flac
-6:蒋一侨 - YOLO [mqms2].flac
-7:蒋一侨 - 南浔 [mqms2].flac
-8:蒋一侨 - 巴黎23号 [mqms2].flac
-9:蒋一侨 - 戏子 [mqms2].flac
-10:李克勤 - 红日 [mqms2].flac
-11:Donny Osmond - Puppy Love [mqms2].flac
-12:G.E.M. 邓紫棋 - Game Over [mqms2].flac
-13:G.E.M. 邓紫棋 - Mascara (Glossy Version) [mqms2].flac
-14:G.E.M. 邓紫棋 - 写不完的温柔 [mqms2].flac
-15:G.E.M. 邓紫棋 - 想讲你知 [mqms2].flac
-16:G.E.M. 邓紫棋 - 意式恋爱 [mqms2].flac
-17:G.E.M. 邓紫棋 - 我不懂爱 [mqms2].flac
-18:G.E.M. 邓紫棋 - 瞬间 (Dance Remix) [mqms2].flac
-19:G.E.M. 邓紫棋 - 蝶恋花 [mqms].mp3
-20:G.E.M. 邓紫棋 - 毒苹果 [mqms2].flac
-21:G.E.M. 邓紫棋 - 突然之间 [mqms2].flac
-22:G.E.M. 邓紫棋 - 孤独 [mqms2].flac
-23:G.E.M. 邓紫棋 - 光年之外 [mqms2].flac
-24:G.E.M. 邓紫棋 - 红蔷薇白玫瑰 [mqms2].flac
-25:G.E.M. 邓紫棋 - 后会无期 [mqms2].flac
-26:G.E.M. 邓紫棋 - 画 (Live Piano Session Ⅱ) [mqms2].flac
-27:G.E.M. 邓紫棋 - Do You Know [mqms].mp3
-28:G.E.M. 邓紫棋 - Halo [mqms].mp3
-29:G.E.M. 邓紫棋 - I Have Nothing [mqms2].mp3
-30:G.E.M. 邓紫棋 - Sleeping Beauty (睡公主英文版) [mqms].mp3
-31:G.E.M. 邓紫棋 - What Makes It To [mqms].mp3
-32:G.E.M. 邓紫棋 - 我真的受伤了 [mqms].mp3
-33:G.E.M. 邓紫棋 - 倒数 [mqms2].flac
-34:G.E.M. 邓紫棋 - 另一个童话 [mqms2].flac
-35:G.E.M. 邓紫棋 - 龙卷风 [mqms2].flac
-36:G.E.M. 邓紫棋 - Fly Away [mqms2].flac
-37:G.E.M. 邓紫棋 - 依然睡公主 [mqms2].flac
-38:G.E.M. 邓紫棋 - 很久以后 [mqms2].flac
-39:G.E.M. 邓紫棋 - 灰狼 [mqms2].flac
-40:G.E.M. 邓紫棋 - 萤火 [mqms2].flac
-41:G.E.M. 邓紫棋 - 透明 [mqms2].flac
-42:G.E.M. 邓紫棋 - 偶尔 [mqms2].flac
-43:G.E.M. 邓紫棋 - 平行世界 [mqms2].flac
-44:G.E.M. 邓紫棋 - 桃花诺 [mqms2].flac
-45:G.E.M. 邓紫棋 - WHY [mqms2].flac
-46:G.E.M. 邓紫棋 - 睡皇后 [mqms2].flac
-47:G.E.M. 邓紫棋 - 岩石里的花 [mqms2].flac
-48:G.E.M. 邓紫棋 - 死了都要 • 爱 [mqms2].flac
-49:G.E.M. 邓紫棋 - Imagine (Live) [mqms2].flac
-50:G.E.M. 邓紫棋 - 你不是真正的快乐 (Live) [mqms2].flac
-51:G.E.M. 邓紫棋 - Falling (Live) [mqms2].flac
-52:G.E.M. 邓紫棋 - 你把我灌醉 (Live) [mqms2].flac
-53:G.E.M. 邓紫棋 - If I Were A Boy (Live) [mqms2].flac
-54:G.E.M. 邓紫棋 - 喜欢你 (Live) [mqms2].flac
-55:G.E.M. 邓紫棋 - 喜欢你 [mqms2].flac
-56:G.E.M. 邓紫棋 - 心之焰 [mqms2].flac
-57:G.E.M. 邓紫棋 - 一路逆风 [mqms2].flac
-58:G.E.M. 邓紫棋 - 于是 [mqms2].flac
-59:G.E.M. 邓紫棋 - 再见 [mqms2].flac
-60:G.E.M. 邓紫棋 - 多远都要在一起 [mqms2].flac
-61:G.E.M. 邓紫棋 - 新的心跳 [mqms2].flac
-62:G.E.M. 邓紫棋 - 来自天堂的魔鬼 [mqms2].flac
-63:G.E.M. 邓紫棋 - 查克靠近 [mqms2].flac
-64:G.E.M. 邓紫棋 - 有心人 [mqms2].flac
-65:G.E.M. 邓紫棋 - Where Did U Go [mqms2].flac
-66:G.E.M. 邓紫棋 - 回忆的沙漏 [mqms2].flac
-67:G.E.M. 邓紫棋 - 睡公主 [mqms2].flac
-68:G.E.M. 邓紫棋 - 是否 (Live Piano Session) [mqms2].flac
-69:G.E.M. 邓紫棋 - One Button (Live) [mqms2].flac
-70:G.E.M. 邓紫棋 - 潜意式的残酷 (Live) [mqms2].mp3
-71:G.E.M. 邓紫棋 - A.I.N.Y. (Live) [mqms2].flac
-72:G.E.M. 邓紫棋 - All About U (Live) [mqms2].flac
-73:G.E.M. 邓紫棋 - Don't Stop The Music (Live) [mqms2].flac
-74:G.E.M. 邓紫棋 - Get Everybody Moving (Live) [mqms2].flac
-75:G.E.M. 邓紫棋 - Get Over You (Live) [mqms2].flac
-76:G.E.M. 邓紫棋 - Just The Way You Are (Live) [mqms2].flac
-77:G.E.M. 邓紫棋 - My Secret (Live) [mqms2].flac
-78:G.E.M. 邓紫棋 - Wanna Be Startin' Somehin' (Live) [mqms2].flac
-79:G.E.M. 邓紫棋 - You Raise Me Up (Live) [mqms2].flac
-80:G.E.M. 邓紫棋 - 塞纳河 (Live) [mqms2].flac
-81:G.E.M. 邓紫棋 - 睡公主 (Live) [mqms2].flac
-82:G.E.M. 邓紫棋 - 美好的旧时光 (Live) [mqms2].flac
-83:G.E.M. 邓紫棋 - Get Over You [mqms2].flac
-84:G.E.M. 邓紫棋 - Good to be Bad [mqms2].flac
-85:G.E.M. 邓紫棋 - Say It Loud [mqms2].flac
-86:G.E.M. 邓紫棋 - The Voice Within [mqms2].flac
-87:G.E.M. 邓紫棋 - Twinkle II [mqms2].flac
-88:G.E.M. 邓紫棋 - 寂寞星球的玫瑰 [mqms2].flac
-89:G.E.M. 邓紫棋 - 我的秘密 [mqms2].flac
-90:G.E.M. 邓紫棋 - 末日 [mqms2].flac
-91:G.E.M. 邓紫棋 - Someday I'll Fly [mqms2].flac
-92:G.E.M. 邓紫棋 - Victoria [mqms2].flac
-93:G.E.M. 邓紫棋 - Walk on Water [mqms2].flac
-94:G.E.M. 邓紫棋 - After Tonight [mqms2].flac
-95:G.E.M. 邓紫棋 - Oh Boy [mqms2].flac
-96:G.E.M. 邓紫棋 - 下一秒 [mqms2].flac
-97:G.E.M. 邓紫棋 - 不存在的存在 [mqms2].flac
-98:G.E.M. 邓紫棋 - 失真 [mqms2].flac
-99:G.E.M. 邓紫棋 - 奇迹 [mqms2].flac
-100:G.E.M. 邓紫棋 - 泡沫 [mqms2].flac
+0:李克勤 - 红日 [mqms2].flac
+1:曲锦楠 - 霞光 [mqms2].mp3
+2:蒋一侨 - I Go Party Tonight [mqms2].flac
+3:蒋一侨 - YOLO [mqms2].flac
+4:蒋一侨 - 南浔 [mqms2].flac
+5:蒋一侨 - 巴黎23号 [mqms2].flac
+6:蒋一侨 - 戏子 [mqms2].flac
+7:蒋一侨 - 汝 [mqms2].flac
+8:蒋一侨 - 一棵树 One Tree [mqms2].flac
+9:蒋一侨 - 留下 Stay [mqms2].flac
+10:蒋一侨 - 芳年 Youth [mqms2].flac
+11:F.I.R.飞儿乐团 - 千年之恋 [mqms2].flac
+12:Donny Osmond - Puppy Love [mqms2].flac
+13:G.E.M. 邓紫棋 - Game Over [mqms2].flac
+14:G.E.M. 邓紫棋 - Mascara (Glossy Version) [mqms2].flac
+15:G.E.M. 邓紫棋 - 写不完的温柔 [mqms2].flac
+16:G.E.M. 邓紫棋 - 想讲你知 [mqms2].flac
+17:G.E.M. 邓紫棋 - 意式恋爱 [mqms2].flac
+18:G.E.M. 邓紫棋 - 我不懂爱 [mqms2].flac
+19:G.E.M. 邓紫棋 - 瞬间 (Dance Remix) [mqms2].flac
+20:G.E.M. 邓紫棋 - 蝶恋花 [mqms].mp3
+21:G.E.M. 邓紫棋 - 毒苹果 [mqms2].flac
+22:G.E.M. 邓紫棋 - 突然之间 [mqms2].flac
+23:G.E.M. 邓紫棋 - 孤独 [mqms2].flac
+24:G.E.M. 邓紫棋 - 光年之外 [mqms2].flac
+25:G.E.M. 邓紫棋 - 红蔷薇白玫瑰 [mqms2].flac
+26:G.E.M. 邓紫棋 - 后会无期 [mqms2].flac
+27:G.E.M. 邓紫棋 - 画 (Live Piano Session Ⅱ) [mqms2].flac
+28:G.E.M. 邓紫棋 - Do You Know [mqms].mp3
+29:G.E.M. 邓紫棋 - Halo [mqms].mp3
+30:G.E.M. 邓紫棋 - I Have Nothing [mqms2].mp3
+31:G.E.M. 邓紫棋 - Sleeping Beauty (睡公主英文版) [mqms].mp3
+32:G.E.M. 邓紫棋 - What Makes It To [mqms].mp3
+33:G.E.M. 邓紫棋 - 我真的受伤了 [mqms].mp3
+34:G.E.M. 邓紫棋 - 倒数 [mqms2].flac
+35:G.E.M. 邓紫棋 - 另一个童话 [mqms2].flac
+36:G.E.M. 邓紫棋 - 龙卷风 [mqms2].flac
+37:G.E.M. 邓紫棋 - Fly Away [mqms2].flac
+38:G.E.M. 邓紫棋 - 依然睡公主 [mqms2].flac
+39:G.E.M. 邓紫棋 - 很久以后 [mqms2].flac
+40:G.E.M. 邓紫棋 - 灰狼 [mqms2].flac
+41:G.E.M. 邓紫棋 - 萤火 [mqms2].flac
+42:G.E.M. 邓紫棋 - 透明 [mqms2].flac
+43:G.E.M. 邓紫棋 - 偶尔 [mqms2].flac
+44:G.E.M. 邓紫棋 - 平行世界 [mqms2].flac
+45:G.E.M. 邓紫棋 - 桃花诺 [mqms2].flac
+46:G.E.M. 邓紫棋 - WHY [mqms2].flac
+47:G.E.M. 邓紫棋 - 睡皇后 [mqms2].flac
+48:G.E.M. 邓紫棋 - 岩石里的花 [mqms2].flac
+49:G.E.M. 邓紫棋 - 死了都要 • 爱 [mqms2].flac
+50:G.E.M. 邓紫棋 - Imagine (Live) [mqms2].flac
+51:G.E.M. 邓紫棋 - 你不是真正的快乐 (Live) [mqms2].flac
+52:G.E.M. 邓紫棋 - Falling (Live) [mqms2].flac
+53:G.E.M. 邓紫棋 - 你把我灌醉 (Live) [mqms2].flac
+54:G.E.M. 邓紫棋 - If I Were A Boy (Live) [mqms2].flac
+55:G.E.M. 邓紫棋 - 喜欢你 (Live) [mqms2].flac
+56:G.E.M. 邓紫棋 - 喜欢你 [mqms2].flac
+57:G.E.M. 邓紫棋 - 心之焰 [mqms2].flac
+58:G.E.M. 邓紫棋 - 一路逆风 [mqms2].flac
+59:G.E.M. 邓紫棋 - 于是 [mqms2].flac
+60:G.E.M. 邓紫棋 - 再见 [mqms2].flac
+61:G.E.M. 邓紫棋 - 多远都要在一起 [mqms2].flac
+62:G.E.M. 邓紫棋 - 新的心跳 [mqms2].flac
+63:G.E.M. 邓紫棋 - 来自天堂的魔鬼 [mqms2].flac
+64:G.E.M. 邓紫棋 - 查克靠近 [mqms2].flac
+65:G.E.M. 邓紫棋 - 有心人 [mqms2].flac
+66:G.E.M. 邓紫棋 - Where Did U Go [mqms2].flac
+67:G.E.M. 邓紫棋 - 回忆的沙漏 [mqms2].flac
+68:G.E.M. 邓紫棋 - 睡公主 [mqms2].flac
+69:G.E.M. 邓紫棋 - 是否 (Live Piano Session) [mqms2].flac
+70:G.E.M. 邓紫棋 - One Button (Live) [mqms2].flac
+71:G.E.M. 邓紫棋 - 潜意式的残酷 (Live) [mqms2].mp3
+72:G.E.M. 邓紫棋 - A.I.N.Y. (Live) [mqms2].flac
+73:G.E.M. 邓紫棋 - All About U (Live) [mqms2].flac
+74:G.E.M. 邓紫棋 - Don't Stop The Music (Live) [mqms2].flac
+75:G.E.M. 邓紫棋 - Get Everybody Moving (Live) [mqms2].flac
+76:G.E.M. 邓紫棋 - Get Over You (Live) [mqms2].flac
+77:G.E.M. 邓紫棋 - Just The Way You Are (Live) [mqms2].flac
+78:G.E.M. 邓紫棋 - My Secret (Live) [mqms2].flac
+79:G.E.M. 邓紫棋 - Wanna Be Startin' Somehin' (Live) [mqms2].flac
+80:G.E.M. 邓紫棋 - You Raise Me Up (Live) [mqms2].flac
+81:G.E.M. 邓紫棋 - 塞纳河 (Live) [mqms2].flac
+82:G.E.M. 邓紫棋 - 睡公主 (Live) [mqms2].flac
+83:G.E.M. 邓紫棋 - 美好的旧时光 (Live) [mqms2].flac
+84:G.E.M. 邓紫棋 - Get Over You [mqms2].flac
+85:G.E.M. 邓紫棋 - Good to be Bad [mqms2].flac
+86:G.E.M. 邓紫棋 - Say It Loud [mqms2].flac
+87:G.E.M. 邓紫棋 - The Voice Within [mqms2].flac
+88:G.E.M. 邓紫棋 - Twinkle II [mqms2].flac
+89:G.E.M. 邓紫棋 - 寂寞星球的玫瑰 [mqms2].flac
+90:G.E.M. 邓紫棋 - 我的秘密 [mqms2].flac
+91:G.E.M. 邓紫棋 - 末日 [mqms2].flac
+92:G.E.M. 邓紫棋 - Someday I'll Fly [mqms2].flac
+93:G.E.M. 邓紫棋 - Victoria [mqms2].flac
+94:G.E.M. 邓紫棋 - Walk on Water [mqms2].flac
+95:G.E.M. 邓紫棋 - After Tonight [mqms2].flac
+96:G.E.M. 邓紫棋 - Oh Boy [mqms2].flac
+97:G.E.M. 邓紫棋 - 下一秒 [mqms2].flac
+98:G.E.M. 邓紫棋 - 不存在的存在 [mqms2].flac
+99:G.E.M. 邓紫棋 - 失真 [mqms2].flac
+100:G.E.M. 邓紫棋 - 奇迹 [mqms2].flac
+101:G.E.M. 邓紫棋 - 泡沫 [mqms2].flac
 playlist_end

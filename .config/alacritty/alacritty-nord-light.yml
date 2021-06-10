@@ -119,7 +119,7 @@ background_opacity: 0.85
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-
+  #
 # Colors (OneHalfLight)
 colors:
   bright:
@@ -143,12 +143,12 @@ colors:
     red: '#e45649'
     white: '#fafafa'
     yellow: '#c18401'
-  primary:
-    background: '#fafafa'
-    foreground: '#383a42'
   selection:
     background: '#bfceff'
     text: '#383a42'
+  primary:
+    background: '#E3EAF5'
+    foreground: '#3B4252'
 
 bell:
   animation: EaseOutExpo

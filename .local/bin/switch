@@ -32,7 +32,7 @@ then
     # Rofi
     sed -i "s/nord/light/g" ~/.config/rofi/config.rasi
     # Nvim
-    sed -i "s/nord/one" ~/.config/nvim/plugin/c_colorscheme.vim
+    sed -i "s/nord/one" ~/.config/nvim/color.vim
     # Zathura
     cp ~/.config/zathura/zathurarc-light ~/.config/zathura/zathurarc
     # Notify
@@ -60,7 +60,7 @@ then
     # Rofi
     sed -i "s/light/nord/g" ~/.config/rofi/config.rasi
     # Nvim
-    sed -i "s/one/nord" ~/.config/nvim/plugin/c_colorscheme.vim
+    sed -i "s/one/nord" ~/.config/nvim/color.vim
     # Zathura
     cp ~/.config/zathura/zathurarc-nord ~/.config/zathura/zathurarc
     # Notify

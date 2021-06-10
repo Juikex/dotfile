@@ -177,19 +177,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+border_radius 8
+for_window [class=".*"] border pixel 0
+
 ### Gaps ###
-set $default_gaps_inner 6
-set $default_gaps_outer 2
-gaps inner $default_gaps_inner
-gaps outer $default_gaps_outer
-smart_gaps on
+gaps inner 6
+gaps outer 1
 
 ### Borders ###
-new_window pixel 5
-new_float pixel 5
-default_border pixel 5
-hide_edge_borders smart
-
 focus_follows_mouse no
 
 #自启动

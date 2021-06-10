@@ -1,9 +1,12 @@
+let g:polyglot_disabled = ['markdown']
+
 "vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'luochen1990/rainbow'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'itchyny/lightline.vim'
 Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rakr/vim-one'
@@ -12,14 +15,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/lilydjwg/fcitx.vim.git'
 Plug 'Yggdroot/indentLine'
-Plug 'plasticboy/vim-markdown'
 Plug 'sheerun/vim-polyglot'
+Plug 'arcticicestudio/nord-vim'
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
-colorscheme one
-let g:nord_transparent_background = 1
-let g:one_transparent_background = 1
+source $HOME/.config/nvim/color.vim
 
 "设置tab键为触发键
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -56,4 +57,7 @@ endif
 
 let g:python_highlight_all = 1
 
+let g:vim_markdown_conceal = 0
 let g:vim_markdown_conceal_code_blocks = 0
+
+let g:mkdp_open_to_the_world = 1
