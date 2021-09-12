@@ -1,0 +1,13 @@
+#!/usr/bin/sh
+
+ssid=$(nmcli -t -f name connection show --active)
+
+if [[ "$ssid" =~ "Wired" ]]
+then
+	echo " Wired"
+elif [[ "$ssid" != "" ]]
+then
+	echo " $ssid"
+else
+	echo "睊 Offline"
+fi

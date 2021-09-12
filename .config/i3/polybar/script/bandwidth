@@ -1,9 +1,15 @@
 #!/bin/bash
 # Source: http://www.onlamp.com/pub/a/linux/2000/11/16/LinuxAdmin.html
 
+ssid="$(nmcli -t -f name connection show --active)"
 INSTANCE="${BLOCK_INSTANCE}"
 # If you don't like you can use any other IP
-INTERFACE="$(ip route get 8.8.8.8 | grep -Po '(?<=(dev )).*(?= src)')"
+if [[ $ssid != "" ]]
+then
+  INTERFACE="$(ip route get 8.8.8.8 | grep -Po '(?<=(dev )).*(?= src)')"
+else
+  INSTANCE="eno1"
+fi
 
 if [[ "${INSTANCE}" = "" ]]; then
   INSTANCE="${INTERFACE};both"
@@ -48,10 +54,10 @@ function FormatNumber() {
     printf "%d" $(echo "scale=0;${1}/${ONE_MB}" | bc -l)
     echo "M"
   elif [[ "${1}" -ge "${TEN_MB}" ]]; then
-    printf "%d" $(echo "scale=1;${1}/${ONE_MB}" | bc -l)
+    printf "%d" $(echo "scale=0;${1}/${ONE_MB}" | bc -l)
     echo "M"
   elif [[ "${1}" -ge "${ONE_MB}" ]]; then
-    printf "%d" $(echo "scale=2;${1}/${ONE_MB}" | bc -l)
+    printf "%d" $(echo "scale=0;${1}/${ONE_MB}" | bc -l)
     echo "M"
   elif [[ "${1}" -ge "${ONE_KB}" ]]; then
     printf "%d" $(echo "scale=0;${1}/${ONE_KB}" | bc -l)
@@ -72,8 +78,8 @@ if [[ "${PREV_IN}" != "" ]] && [[ "${PREV_OUT}" != "" ]]; then
   USAGE_OUT=$(FormatNumber "${DIFF_OUT}")
 
   if [[ "${DISPLAY}" = "both" ]]; then
-    echo " ${USAGE_IN}  ${USAGE_OUT}"
-    echo " ${USAGE_IN}  ${USAGE_OUT}"
+    echo " ${USAGE_IN}  ${USAGE_OUT}"
+    echo " ${USAGE_IN}  ${USAGE_OUT}"
     DIFF_TOTAL=$((DIFF_TOTAL+DIFF_IN))
     DIFF_TOTAL=$((DIFF_TOTAL+DIFF_OUT))
   elif [[ "${DISPLAY}" = "in" ]]; then

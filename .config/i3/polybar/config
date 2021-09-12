@@ -57,9 +57,9 @@ font-1 = "NotoSans CJK SC:size=15:weight=Medium;3"
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-modules-left = i3 cpu memory ssid network archupdate
+modules-left = i3 cpu memory ssid bandwidth archupdate
 modules-center = mpd
-modules-right = apps weather  date volume backlight battery 
+modules-right = apps weather date volume battery
 
 separator =""
 spacing = 1
@@ -175,7 +175,7 @@ format-foreground = ${color.BLUE}
 ;   %gb_swap_free%
 ;   %gb_swap_used%
 
-label = " %gb_used%"
+label = " %percentage_used%%"
 
 ; Only applies if <ramp-used> is used
 ;;ramp-used-0 = 
@@ -375,9 +375,9 @@ interval = 600
 [module/ssid]
 type=custom/script
 format = <label>
-format-prefix = " "
+format-prefix = ""
 format-foreground = ${color.RED}
-exec = nmcli -t -f name connection show --active
+exec = bash ~/.config/i3/polybar/script/ssid
 click-left = sh ~/.config/i3/polybar/script/iface
 
 [module/archupdate]
@@ -391,20 +391,16 @@ interval = 600
 type = custom/menu
 expand-right = true
 
-label-open = ""
+label-open = " "
 label-close = ""
 label-separator =|
 
-menu-0-0 = ⏻ 
-menu-0-0-exec = poweroff
-menu-0-1 = 
-menu-0-1-exec = reboot
-menu-0-2 = 
-menu-0-2-exec = bash ~/.local/bin/wacom
-menu-0-3 = 
-menu-0-3-exec = bash ~/.local/bin/samba.sh
+menu-0-0 = 
+menu-0-0-exec = bash ~/.local/bin/wacom
+menu-0-1 = 
+menu-0-1-exec = bash ~/.local/bin/samba.sh
 
-format-foreground = ${color.YELLOW}
+format-foreground = ${color.CYAN}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/date]
@@ -429,7 +425,7 @@ type = internal/mpd
 interval = 2
 
 format-online = <label-song><icon-prev><toggle><icon-next>
-format-online-prefix = " "
+format-online-prefix = ""
 format-online-prefix-font = 1
 format-online-prefix-foreground = ${color.GREEN}
 
@@ -439,7 +435,7 @@ format-paused = <label-song> <toggle>
 format-offline = <label-offline>
 label-offline = ""
 
-label-song =  " %title% - %artist% "
+label-song =  " %title%"
 label-song-maxlen = 40
 label-song-ellipsis = true
 
@@ -460,23 +456,14 @@ icon-next-foreground = ${color.CYAN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/network]
-type = internal/network
-interface = wlo1
-interval = 3.0
-accumulate-stats = true
-unknown-as-up = true
-
-format-connected =<label-connected>
-format-connected-foreground = ${color.GREEN}
-
-format-disconnected = <label-disconnected>
-format-disconnected-prefix = "睊 "
-format-disconnected-foreground = ${color.RED}
-
-label-connected =  %downspeed%  %upspeed%
-label-disconnected = Disconnected
-
+[module/bandwidth]
+type=custom/script
+interval = 5
+format = <label>
+format-prefix = ""
+format-foreground = ${color.GREEN}
+exec = bash ~/.config/i3/polybar/script/bandwidth
+click-left = sh ~/.config/i3/polybar/script/iface
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
 ;;	   / ____/ __ \/ ____/

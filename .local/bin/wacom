@@ -7,6 +7,6 @@ if test -z "$Pen_ID"
 then
     notify-send "wacom未插入"
 else
-    notify-send "wacom映射到第二屏"
+    notify-send "wacom已映射"
     xsetwacom --set ${Pen_ID} MapToOutput "${Map}"
 fi

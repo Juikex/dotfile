@@ -3,7 +3,7 @@
 #sourcecode: https://github.com/linuxconfig/Sunrise-Sunset-Shell-Script.git
 # First obtain a location code from: https://weather.codes/search/
 # Insert your location. For example LOXX0001 is a location code for Bratislava, Slovakia
-location="CHXX0133"
+location="CHXX0116"
 tmpfile=/tmp/$location.out
 storefile=~/.local/bin/sun.store
 today=$(date +%Y-%m-%d)
@@ -12,7 +12,7 @@ if [[ $today = $filestat ]] ; then
 	echo "time is correct"
 else
 	# Obtain sunrise and sunset raw data from weather.com
-	wget -q "https://weather.com/weather/today/l/$location" -O "$tmpfile"
+	wget -q "http://weather.com/weather/today/l/$location" -O "$tmpfile"
 	SUNR=$(grep SunriseSunset "$tmpfile" | grep -oE '((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))' | head -1)
 	SUNS=$(grep SunriseSunset "$tmpfile" | grep -oE '((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))' | tail -1)
 	
